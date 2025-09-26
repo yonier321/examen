@@ -1,0 +1,235 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
+    grid-template-columns: 250px 1fr;
+    width: auto;
+    
+}
+
+.header{
+    gap: 10px;
+  display: grid;
+  grid-template-columns: 250px 1fr; 
+  grid-template-areas: "logo titulo";
+  grid-template-rows: auto auto;
+  flex-wrap: wrap;
+}
+
+.logo {
+  grid-area: logo;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   font-weight: bold;
+  font-size: 1.2em;
+  border-radius: 5%;
+  
+}
+.logo img{
+    height: auto;
+    width: 50%;
+}
+
+.titulo {
+  grid-area: titulo;
+  background: aquamarine;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5%;
+  
+}
+.nav{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.nav ul li a{
+    text-decoration: none;
+    color: #111111;
+
+}
+
+
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cursos {
+  padding: 20px;
+}
+.cursos h2{
+  text-align: center;
+  color: blue;
+}
+
+.contenedor-cursos {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  
+  gap: 20px;
+  align-items: stretch;
+}
+
+
+.info-cursos {
+  background: #111111;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  
+}
+
+.info-cursos .boton {
+  margin-top: 20px;
+  padding: 10px;
+  background: yellow;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+ .info-cursos :hover{
+  transform: translate(-8px);
+}
+
+
+.motores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+.motores article {
+  background: #1acbd4;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.motores h3 {
+  margin-top: 10px;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.motores img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+article:hover {
+  transform: translateY(-5px);
+}
+
+article:hover h3 {
+  color: #4120ff;
+  text-shadow: 0 0 10px rgba(93, 29, 255, 0.8);
+}
+
+
+  
+.videos {
+  width: 100vw;   
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  
+}
+
+.contenedor-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%; 
+}
+
+.contenedor-videos iframe {
+  width: 100%;         
+  aspect-ratio: 16/9;  
+  border: none;
+  border-radius: 20px;
+}
+.videos h2{
+  text-align: center;
+  color: blue;
+} 
+.contenedor-videos article{
+  text-align: center;
+  
+}
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .redes a {
+  margin: 0 10px;
+  color: #ffccbc;
+  text-decoration: none;
+}
+
+footer .redes a:hover {
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .contenedor-cursos {
+    grid-template-columns: 1fr; 
+  }
+
+  .motores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contenedor-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .motores {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-videos {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  
+
+
+
